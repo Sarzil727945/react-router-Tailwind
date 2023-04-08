@@ -9,6 +9,7 @@ import App from './App';
 import Home from './components/Home';
 import About from './components/About';
 import ErrorPage from './components/ErrorPage';
+import Shop from './components/Shop/Shop';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
      {
        path: "/",
        element: <Home></Home>,
+     },
+     {
+       path: "/shop",
+       element: <Shop></Shop>,
+       loader: () => fetch('products.json'),
      },
      {
        path: "/about",
