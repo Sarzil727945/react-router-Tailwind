@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ProductCard from '../Cards/ProductCard';
-import { addToDB } from '../../utils/faceDB';
+import { addToLocalStorage } from '../../utils/faceDB';
 
 const Shop = () => {
      const data = useLoaderData();
 
      // card button handler
      const handlerAddToCard = (id) =>{
-          addToDB(id);
+          addToLocalStorage(id);
      }
      return (
           <div className='product-container'>
